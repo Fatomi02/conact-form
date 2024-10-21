@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="success-box">
+      <div class="success-inner-box">
+        <div class="success-top">
+          <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+          <svg
+            enable-background="new 0 0 24 24"
+            height="24px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="24px"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <path
+              d="M256,6.998c-137.533,0-249,111.467-249,249c0,137.534,111.467,249,249,249s249-111.467,249-249  C505,118.464,393.533,6.998,256,6.998z M256,485.078c-126.309,0-229.08-102.771-229.08-229.081  c0-126.31,102.771-229.08,229.08-229.08c126.31,0,229.08,102.771,229.08,229.08C485.08,382.307,382.31,485.078,256,485.078z"
+              fill="#425661"
+            />
+            <polygon
+              fill="#FFFFFF"
+              points="384.235,158.192 216.919,325.518 127.862,236.481 113.72,250.624 216.919,353.803 398.28,172.334   "
+            />
+          </svg>
+          Message sent!
+        </div>
+        <?xml version="1.0" ?><svg
+          class="cursor-pointer"
+          id="back"
+          enable-background="new 0 0 24 24"
+          height="24px"
+          id="svg2"
+          version="1.1"
+          viewBox="0 0 32 32"
+          width="24px"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:cc="http://creativecommons.org/ns#"
+          xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+          xmlns:svg="http://www.w3.org/2000/svg"
+        >
+          <g id="background"><rect fill="none" height="32" width="32" /></g>
+          <g id="cancel">
+            <polygon
+              points="2,26 6,30 16,20 26,30 30,26 20,16 30,6 26,2 16,12 6,2 2,6 12,16  "
+            />
+          </g>
+        </svg>
+      </div>
+      <p class="success-p">
+        Thanks for completing the form. We'll be in touch soon
+      </p>
+    </div>
+
+    <div class="container">
+      <h2>Contact Us</h2>
+
+      <form id="form" novalidate>
+        <div class="name-box">
+          <div class="inner-name-box">
+            <label for="first-name" class="label"
+              >First Name <span class="asterisk">*</span></label
+            >
+            <input type="text" id="first-name" name="first-name" required />
+            <span id="first-name-error" class="error">
+              This field is required
+            </span>
+          </div>
+          <div class="inner-name-box">
+            <label for="last-name" class="label"
+              >Last Name <span class="asterisk">*</span></label
+            >
+            <input type="text" id="last-name" name="last-name" required />
+            <span id="last-name-error" class="error">
+              This field is required
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="label"
+            >Email Address <span class="asterisk">*</span></label
+          >
+          <input type="email" id="email" name="email" required />
+          <span id="email-error" class="error">
+            Please enter a valid email address
+          </span>
+        </div>
+
+        <div>
+          <label class="label"
+            >Query Type <span class="asterisk">*</span></label
+          >
+          <div class="query-div">
+            <label id="label-general" class="query-label">
+              <input
+                id="general"
+                type="radio"
+                name="query-type"
+                onchange="updateBackground('general')"
+                value="general"
+                required
+              />
+              <span class="query-span">General Enquiry</span>
+            </label>
+
+            <label id="label-support" class="query-label">
+              <input
+                id="support"
+                type="radio"
+                name="query-type"
+                onchange="updateBackground('support')"
+                value="support"
+                required
+              />
+              <span class="query-span">Support Request</span>
+            </label>
+          </div>
+          <span id="query-error" class="error">
+            Please select a query type.
+          </span>
+        </div>
+
+        <div>
+          <label for="message" class="label"
+            >Message <span class="asterisk">*</span></label
+          >
+          <textarea id="message" name="message" required></textarea>
+          <span id="message-error" class="error"> This field is required </span>
+        </div>
+
+        <div class="checkbox-div">
+          <label class="checkbox-label">
+            <input
+              id="checkbox"
+              type="checkbox"
+              name="consent"
+              required
+              class="checkbox"
+            />
+            <span class="checkbox-span"
+              >I consent to being contacted by the team
+              <span class="asterisk">*</span></span
+            >
+            <span id="checkbox-error" class="error">
+              To submit this form, please consent to being contacted
+            </span>
+          </label>
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script defer src="./script.js"></script>
+  </body>
+</html>
