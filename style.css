@@ -6,6 +6,14 @@
 }
 
 /* Tag Selector */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+input, textarea, select {
+  font-size: 16px;
+}
+
 body {
   background-color: #dff0e7;
   display: flex;
