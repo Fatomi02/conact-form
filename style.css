@@ -10,10 +10,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-input, textarea, select {
-  font-size: 16px;
-}
-
 body {
   background-color: #dff0e7;
   display: flex;
@@ -23,6 +19,32 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 24px 0px;
+}
+
+
+input, textarea, select {
+  font-size: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  color: #2b4246;
+  font-size: 16px;
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #2b4246;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 input[type="text"],
@@ -37,12 +59,24 @@ input[type="email"] {
   padding: 12px 8px;
 }
 
+textarea {
+  margin-top: 8px;
+  padding: 12px;
+  display: block;
+  width: 100%;
+  border: 1px solid #86a2a6;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  height: 96px;
+}
+
 input[type="text"]:hover,
-input[type="email"]:hover {
+input[type="email"]:hover, textarea:hover {
   border-color: #0c7d69;
 }
 input[type="text"]:focus,
-input[type="email"]:focus {
+input[type="email"]:focus, textarea:focus {
   border-color: #0c7d69;
 }
 
@@ -60,25 +94,6 @@ input[type="radio"]:hover {
 }
 
 input[type="radio"]:focus {
-  border-color: #0c7d69;
-}
-
-textarea {
-  margin-top: 8px;
-  padding: 12px;
-  display: block;
-  width: 100%;
-  border: 1px solid #86a2a6;
-  border-radius: 6px;
-  cursor: pointer;
-  outline: none;
-  height: 96px;
-}
-
-textarea:hover {
-  border-color: #0c7d69;
-}
-textarea:focus {
   border-color: #0c7d69;
 }
 
@@ -204,30 +219,11 @@ input[type="radio"]:checked::after {
   gap: 8px;
 }
 
-h2 {
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: #2b4246;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
 .name-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
-}
-
-.label {
-  display: block;
-  font-weight: 500;
-  color: #2b4246;
 }
 
 .checkbox-span {
